@@ -1,3 +1,11 @@
+<?php
+session_start();
+   include("../dbconn.php")
+   include("functions.php");
+
+   $user_data = check_login($con);
+?>
+
 <html>
 <head>
 <title>User login</title>
@@ -13,7 +21,7 @@
           <a href="javascript:login()">LOGIN</a>
           <a href="javascript:register()">REGISTER</a>
         </div>
-          <div class="form-box">
+          <div class="form-box" action="user_login.php">
             <form id="login" class="box" onclick="login()" method="post">
               <h1>Login</h1>
                   <input type="number" placeholder="Registration No." required>
