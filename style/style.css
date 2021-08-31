@@ -23,12 +23,11 @@
     margin-left: 15px;
 }
 .navbar span{
-    text-align: center;
     color: white;
-    margin-top: 50px;
     height: 90px; 
-    line-height: 60px; 
+    line-height: 10px; 
     white-space: nowrap;
+    padding-top: 10px;
 }
 .container button{
     padding-top: 50px;

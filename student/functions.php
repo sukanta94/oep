@@ -1,11 +1,12 @@
 <?php
 
+//function to check student login
 function check_login($con)
 {
-	if(isset($_SESSION['user_id']))
+	if(isset($_SESSION['sid']))
 	{
-		$id = $_SESSION['user_id'];
-		$query = "select * from users where user_id = '$id' limit 1";
+		$id = $_SESSION['sid'];
+		$query = "select * from studentlogin where sid = '$id' limit 1";
 
 		$result = mysqli_query($con,$query);
 		if($result && mysqli_num_rows($result) > 0)
@@ -15,23 +16,25 @@ function check_login($con)
 		}
 	}
 
-	header("Location: user_login.html");
+	//redirect to login
+	header("Location: userlogin.php");
 	die;
 }
 
+//function to generate random unique id to validate student
 function random_num($length)
 {
 	$text = "";
-	if ($length < 5)
+	if ($length < 5)            //checking if unique id is greater than five
 	 {
 	 	$length = 5;
 	}
 
-	$len = rand(4,$length);
+	$len = rand(4,$length);    //creating unique id 
 
 	for($i=0; $i < $len; $i++)
 	{
-		$text .=rand(0,6);
+		$text .=rand(0,9);
 	}
 
 	return $text;
