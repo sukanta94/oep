@@ -20,8 +20,7 @@ body{
 }
 #sidenavpanel a{
     position: absolute;
-    left: -80px;
-    transition: 0.3s;
+    left: 100px;
     padding: 15px;
     width: 100px;
     text-decoration: none;
@@ -29,7 +28,7 @@ body{
     color: white;
     border-radius: 0 5px 5px 0;
 }
-#sidenavpanel a:hover{
+#sidenavpanel a{
     left: 0;
 }
 #profile{
@@ -50,4 +49,8 @@ body{
 #logout{
     top: 270px;
     background-color: #555;
+}
+.uname{
+    float: right;
+    padding-right: 20px;
 }

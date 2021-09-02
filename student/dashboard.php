@@ -4,7 +4,7 @@ session_start();
     include("../dbconn.php");
     include("functions.php");
  
-   // $user_data = check_login($con);
+    $user_data = check_login($con);
 ?>
 <!DOCTYPE html>
 <html>
@@ -21,7 +21,9 @@ session_start();
             <img src="../logo.png">&nbsp
             <span> KARIMGANJ COLLEGE</span><br>&nbsp
             <span class="logo">Online Examination Portal</span>
-            <?php echo $user_data['sname']; ?>
+            <div class="uname">
+                <span><?php echo $user_data['sname']; ?></span>
+            </div>
         </div>
     </div>
     <div class="sidenav" id="sidenavpanel">
