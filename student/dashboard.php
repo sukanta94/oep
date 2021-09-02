@@ -18,19 +18,18 @@ session_start();
 <body>
     <div class="main">
         <div class="navbar">
-          <img src="../logo.png">&nbsp
-          <span> KARIMGANJ COLLEGE</span><br>&nbsp
-          <span class="logo">Online Examination Portal</span>
-          <!---<div class="uname"><?php echo $user_data['sname']; ?></div>-->
-        </div>
-
-        <div id="sidenav" class="nav">
-            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-            <a href="profile.php">Profile</a>
-            <a href="exam.php">Take Exam</a>
-            <a href="results.php">Results</a>
-            <a href="logout.php">Logout</a>
+            <img src="../logo.png">&nbsp
+            <span> KARIMGANJ COLLEGE</span><br>&nbsp
+            <span class="logo">Online Examination Portal</span>
+            <?php echo $user_data['sname']; ?>
         </div>
     </div>
+    <div class="sidenav" id="sidenavpanel">
+        <a href="profile.php" id="profile">Profile</a>
+        <a href="exam.php" id="exam">Take Exam</a>
+        <a href="results.php" id="results">Results</a>
+        <a href="logout.php" id="logout">Logout</a>
+    </div>
+
 </body>
 </html>
