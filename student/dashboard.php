@@ -25,13 +25,17 @@ session_start();
                 <span><?php echo $user_data['sname']; ?></span>
             </div>
         </div>
-    </div>
+    
     <div class="sidenav" id="sidenavpanel">
         <a href="profile.php" id="profile">Profile</a>
         <a href="exam.php" id="exam">Take Exam</a>
         <a href="results.php" id="results">Results</a>
         <a href="logout.php" id="logout">Logout</a>
     </div>
+    <div class="body">
+        <span><h1>NOTICE</h1></span>
+    </div>
+</div>
 
 </body>
 </html>

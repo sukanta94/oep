@@ -22,9 +22,7 @@ session_start();
 
          $to = $mail;
          $subject = "Unique id";
-         
-         $message = $name." your Unique id is ".$sid;
-         
+         $message = $name." your Unique id is ".$sid; 
          $header = "From:oeptest789@gmail.com";
          
          mail($to,$subject,$message,$header);
