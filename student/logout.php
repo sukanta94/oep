@@ -7,5 +7,7 @@ if(isset($_SESSION['sid']))
 	unset($_SESSION['sid']);
 }
 
-header("Location: userlogin.php");
+header("Location: login.html");
 die;
+
+

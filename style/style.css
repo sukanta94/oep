@@ -29,7 +29,10 @@
     white-space: nowrap;
     padding-top: 10px;
 }
-.container button{
+button{
+    border-radius: 65px;
+}
+.btn{
     padding-top: 50px;
     padding-bottom: 50px;
     padding-left: 300px;
@@ -38,11 +41,10 @@
     background: linear-gradient(to right,#ff105f,#ffad06);
     border: 0;
     outline: none;
-    border-radius: 65px;
     text-align: center;
     margin: 20px auto;
     color: white;
 }
-.container button:hover{
+.btn:hover{
     background: linear-gradient(to right,#00b712,#5aff15);
 }

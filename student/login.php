@@ -7,12 +7,11 @@ session_start();
     if($_SERVER['REQUEST_METHOD'] == "POST")
    {
       $sid=$_POST['sid'];
-      $mail=$_POST['semail'];
       $pass=$_POST['spassword'];
 
-      if(!empty($sid) && !empty($mail) && !empty($pass))
+      if(!empty($sid) && !empty($pass))
       {
-         $query="select * from studentlogin where sid = '$sid' AND semail = '$mail' limit 1";
+         $query="select * from studentlogin where sid = '$sid' limit 1";
          $result=mysqli_query($con,$query);
          if ($result) 
          {

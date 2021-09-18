@@ -5,6 +5,27 @@ session_start();
     include("functions.php");
  
     $user_data = check_login($con);
+
+    $query="select * from studentlogin where sid = '$user_data[sid]'";
+    $data=mysqli_query($con,$query);
+    while($row = mysqli_fetch_array($data)){
+        $uid=$row['sid'];
+        $name=$row['sname'];
+        $roll=$row['sroll'];
+        $email=$row['semail'];
+        $phone=$row['sphone'];
+        $stream=$row['sstream'];
+        $course=$row['scourse'];
+        $sem=$row['ssem'];
+        $core=$row['score'];
+        $pass1=$row['spass1'];
+        $pass2=$row['spass2'];
+        $pass3=$row['spass3'];
+        $gec=$row['sgec'];
+        $sec=$row['ssec'];
+        $aecc=$row['saecc'];
+        $pic=$row['spic'];
+    }
 ?>
 <!DOCTYPE html>
 <html>
@@ -26,51 +47,113 @@ session_start();
         </div>
          <div class="sidenav" id="sidenavpanel">
             <a href="dashboard.php" id="dashboard">Dashboard</a>
-            <a href="exam.php" id="exam">Take Exam</a>
+            <a href="exam.php" id="exam">Give Exam</a>
             <a href="results.php" id="results">Results</a>
             <a href="logout.php" id="logout">Logout</a>
         </div>
-        
-        <span><h1>PROFILE</h1></span>
-        <table>
-            <tr>
-                <th>Name</th>
-                <th>Roll no</th>
-                <th>Email</th>
-                <th>Phone no</th>
-                <th>Course</th>
-                <th>Semester</th>
-            </tr>
-        <?php
-        $query="select * from studentlogin where sid = '$user_data[sid]' ";
-        $data=mysqli_query($con,$query);
-        $total=mysqli_num_rows($data);
-
-       if($total!=0)
-       {
-           while($result=mysqli_fetch_assoc($data))
-           {
-           echo "<tr>            
-                    <td>".$result['sname']."</td>
-                    <td>".$result['sroll']."</td>
-                    <td>".$result['semail']."</td>
-                    <td>".$result['sphone']."</td>
-                    <td>".$result['scourse']."</td>
-                    <td>".$result['ssem']."</td>
-                </tr>";
-           }
-       }
-       else
-       {
-           echo "No Records found";
-       }
-
-       ?>
-       </table>
-       <div class="btn">
-           <button onclick="window.location.href='updetails.php'">Update Details</button>
-           <button onclick="window.location.href='uppass.php'">Update Password</button>
-       </div>
+        <div class="container">
+        <div class="left">
+            <span><h1>PROFILE</h1></span>
+            <table>
+                <tr>
+                    <td><b>Unique Id</b></td>
+                    <td><?php echo"$uid";?></td>
+                </tr>
+                <tr>
+                    <td><b>Name</b></td>
+                    <td><?php echo"$name";?></td>
+                </tr>
+                <tr>
+                    <td><b>Roll No</b></td>
+                    <td><?php echo"$roll";?></td>
+                </tr>
+                <tr>
+                    <td><b>Email</b></td>
+                    <td><?php echo"$email";?></td>
+                </tr>
+                <tr>
+                    <td><b>Phone</b></td>
+                    <td><?php echo"$phone";?></td>
+                </tr>
+                <tr>
+                    <td><b>Stream</b></td>
+                    <td><?php echo"$stream";?></td>
+                </tr>
+                <tr>
+                    <td><b>Course</b></td>
+                    <td><?php echo"$course";?></td>
+                </tr>
+                <tr>
+                    <td><b>Semester</b></td>
+                    <td><?php echo"$sem";?></td>
+                </tr>
+                 <?php
+                    if($core!=null){
+                       echo "<tr>";
+                       echo "<td><b>Core/DSE/CORE1</b></td>";
+                       echo "<td>$core</td>";
+                       echo "</tr>";
+                   }
+                 ?>
+                 <?php
+                    if($pass1!=null){
+                       echo "<tr>";
+                       echo "<td><b>DSC1/DSE1</b></td>";
+                       echo "<td>$pass1</td>";
+                       echo "</tr>";
+                   }
+                 ?>
+                 <?php
+                    if($pass2!=null){
+                       echo "<tr>";
+                       echo "<td><b>DSC2/DSE2</b></td>";
+                       echo "<td>$pass2</td>";
+                       echo "</tr>";
+                   }
+                 ?>
+                 <?php
+                    if($pass3!=null){
+                       echo "<tr>";
+                       echo "<td><b>DSC3/DSE3/Language/GE</b></td>";
+                       echo "<td>$pass3</td>";
+                       echo "</tr>";
+                   }
+                 ?>
+                 <?php
+                       if($gec!=null){
+                       echo "<tr>";
+                       echo "<td><b>GE</b></td>";
+                       echo "<td>$gec</td>";
+                       echo "</tr>";
+                   }
+                 ?>
+                 <?php
+                       if($sec!=null){
+                       echo "<tr>";
+                       echo "<td><b>SEC</b></td>";
+                       echo "<td>$sec</td>";
+                       echo "</tr>";
+                   }
+                 ?>
+                 <?php
+                       if($aecc!=null){
+                       echo "<tr>";
+                       echo "<td><b>AECC</b></td>";
+                       echo "<td>$aecc</td>";
+                       echo "</tr>";
+                   }
+                 ?>
+                </table>
+                <button onclick="window.location.href='details.php'" class="upd">Update Details</button>
+                <button onclick="window.location.href='uppass.php'" class="password">Update Password</button>
+        </div>
+        <div class="right">            
+                  <?php 
+                        echo "<img src='".$pic."' style='width:200px;height:200px;'>";
+                  ?>                
+                <button onclick="window.location.href='image.php'" class="pimage">Update Profile Picture</button>            
+        </div>
+    </div>
    
 </body>
 </html>

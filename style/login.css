@@ -7,19 +7,6 @@ body{
     overflow: hidden;
     background-color: #333;
 }
-.navbar a{
-    float: right;
-    color: #f2f2f2;
-    padding-right: 16px;
-    padding-top: 10px;
-    text-decoration: none;
-    font-size: 17px;
-    line-height: 10px; 
-    white-space: nowrap;
-}
-.navbar a:hover {    
-    color: #00b712;
-}
 .navbar img{
     float: left;
     margin-left: 15px;
@@ -78,6 +65,68 @@ body{
 .submit-btn:hover{
     background: linear-gradient(to right,#00b712,#5aff15);
 }
-#register{
-    display: none;
+a{
+    text-decoration: none;
+    color: blue;
+    cursor: pointer;
+}
+button{
+    border-radius: 65px;
+}
+.modal {
+  display: none; 
+  position: fixed; 
+  z-index: 1;
+  padding-top: 100px; 
+  left: 0;
+  top: 0;
+  width: 100%; 
+  height: 100%; 
+  overflow: auto; 
+  background-color: rgb(0,0,0);
+  background-color: rgba(0,0,0,0.4); 
+}
+.modal-content {
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 20%;
+}
+.close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover, .close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+.core{
+    color: deepskyblue;
+    background-color: white;
+    border-color: deepskyblue;
+    padding: 20px 0;
+    width: 100%;
+    margin-bottom: 5px;
+}
+.core:hover{
+    border: white;
+    color: white;
+    background-color: deepskyblue;
+}
+.pass{
+    color: deepskyblue;
+    background-color: white;
+    padding: 20px 0;
+    width: 100%;
+    border-color: deepskyblue;
+}
+.pass:hover{
+    border: white;
+    color: white;
+    background-color: deepskyblue;
 }

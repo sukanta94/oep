@@ -5,15 +5,16 @@ session_start();
     include("functions.php");
  
     $user_data = check_login($con);
+    $query="select * from studentlogin where sid = '$user_data[sid]'";
+    $data=mysqli_query($con,$query);
 ?>
 <!DOCTYPE html>
 <html>
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-    <link rel="stylesheet" href="https://kit-pro.fontawesome.com/releases/v5.15.1/css/pro.min.css"/>
-    <link rel="stylesheet" type="text/css" href="../style/dashboard.css">
-    <title>Dashboard</title>
+    <link rel="stylesheet" type="text/css" href="../style/exam.css">
+    <title>Examination</title>
 </head>
 <body>
     <div class="main">
@@ -25,17 +26,17 @@ session_start();
                 <span><?php echo $user_data['sname']; ?></span>
             </div>
         </div>
-    
-    <div class="sidenav" id="sidenavpanel">
-        <a href="profile.php" id="profile">Profile</a>
-        <a href="exam.php" id="exam">Give Exam</a>
-        <a href="results.php" id="results">Results</a>
-        <a href="logout.php" id="logout">Logout</a>
+         <div class="sidenav" id="sidenavpanel">
+            <a href="dashboard.php" id="dashboard">Dashboard</a>
+            <a href="profile.php" id="profile">Profile</a>
+            <a href="results.php" id="results">Results</a>
+            <a href="logout.php" id="logout">Logout</a>
+        </div>
+        <div class="side">
+            <span><h1>EXAMINATION</h1></span>
+
+        </div>
     </div>
-    <div class="side">
-        <span><h1>NOTICE</h1></span>
-    </div>
-</div>
 
 </body>
 </html>
