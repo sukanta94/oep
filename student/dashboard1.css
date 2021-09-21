@@ -1,0 +1,146 @@
+*{
+	margin: 0;
+    padding: 0;
+ }
+ .container{
+ 	width: 99.3%;
+ 	height: 100%;
+ 	background-image: url("../images.jfif");
+	background-color: rgba(255, 255, 255, 0.1);
+ 	background-position: center;
+ 	background-size: cover;
+ 	padding-right: 4px;
+ 	padding-left: 2px;
+ }
+ .uname{
+	 color: #fff;
+ }
+ .upic{
+ }
+ .navbar{
+ 	height: 12%;
+ 	display: flex;
+ 	align-items: center;
+	 background-color: rgb(14, 1, 1);
+	 padding-right: 5px;
+ }
+ .logo{
+ 	float: left;
+ 	padding-left: 2px;
+ 	width: 100px;
+ 	height: 100px;
+ 	cursor: pointer;
+ }
+ .menu-icon{
+ 	width: 40px;
+  	cursor: pointer;
+ 	margin-left: 8px;
+ 	padding-right: 14px;
+ 	margin-right: 18px;
+ }
+ .home-icon{
+ 	width: 42px;
+ 	cursor: pointer;
+ 	margin-left: 10px;
+ 	margin-right: 10px;
+ }
+ .info-icon{
+ 	width: 40px;
+ 	cursor: pointer;
+ 	margin-left: 8px;
+ 	padding-right: 8px;
+ }
+ nav{
+ 	flex: 1;
+ 	text-align: right;
+ }
+ nav ul li{
+ 	list-style: none;
+ 	display: inline-block;
+ 	margin-left: 12px;
+ }
+ nav ul li a{
+  	text-decoration: none;
+  	color: #fff;
+  	padding: 5px 20px;
+  	border: 1px solid rgba(255, 255, 255, 0);
+ }
+ nav ul li a:hover{
+ 
+ }
+ .row{
+ 	display: flex;
+ 	height: 88%;
+ 	align-items: center;
+ }
+ .col{
+ 	flex-basis: 50%;
+ }
+ p{
+ 	color: rgb(209, 145, 6);
+	 font-family: ;
+ 	font-size: 30px;
+ 	line-height: 15px;
+ }
+ p.a{
+ 	font-style: oblique;
+ }
+button{
+	width: 180px;
+	color: #fff;
+	font-size: 20px;
+	padding: 12px 0;
+	background: #ff105f;
+	border: 3px solid #fff;
+	border-radius: 20px;
+	outline: none;
+	margin-top: 30px;
+}
+button:hover{
+	background-color: #0000ff;
+}
+.card{
+	width: 200px;
+	height: 230px;
+	display: inline-block;
+	border-radius: 10px;
+	padding: 15px 25px;
+	box-sizing: border-box;
+	cursor: pointer;
+	margin: 10px 15px;
+	background-position: center;
+	background-size: contain;
+}
+.card1{
+	background-image:  linear-gradient(160deg, #0093E9 0%, #1ce0d0 50%, #124696 100%);
+	z-index: -10;
+}
+.card2{
+	background-image:  linear-gradient(160deg, #13e900 0%, #d0cc80 50%, #b7e900 100%);
+	z-index: -10;
+}
+.card3{
+	background-image:  linear-gradient(160deg, #e90000 0%, #f1b40e 50%, #cd1e79 100%);
+	z-index: -10;
+}
+.card4{
+	background-image: linear-gradient(160deg, #e900dd 0%, #ee1f5d 50%, #b01ecd 100%);
+	z-index: -10;
+}
+.card:hover{
+	transform: translateY(-10px);
+}
+h1{
+	color: rgb(255, 255, 255);
+	font-style: ;
+	text-align: center;
+	padding-top: 50px;
+	-ms-text-underline-position: ;
+	text-decoration: none;
+	font-size: 30px;
+	text-shadow: 0 0 5px rgb(0, 0, 0);
+}
+.card p{
+	text-shadow: 0 0 5px #000;
+	font-size: 28px;
+}

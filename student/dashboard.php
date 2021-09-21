@@ -20,7 +20,7 @@ session_start();
         <div class="navbar">
             <img src="../logo.png">&nbsp
             <span> KARIMGANJ COLLEGE</span><br>&nbsp
-            <span class="logo">Online Examination Portal</span>
+            <span class="logo">Online Examination Porta</span>
             <div class="uname">
                 <span><?php echo $user_data['sname']; ?></span>
             </div>

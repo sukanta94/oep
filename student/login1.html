@@ -1,0 +1,62 @@
+<html>
+<head>
+<title>Login</title>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="../style/login1.css">
+</head>
+<body>
+    <section>
+        <div class="imgBx">
+            <img src="../login.jpg">
+        </div>
+        <div class="imgBx1">
+            <img src="../logo.png">
+        </div>
+        <div class="contentBx">
+        </div>
+        <div class="main">
+            <div class="navbar">
+              <span> KARIMGANJ COLLEGE</span><br>&nbsp
+              <span class="logo">Online Examination Portal</span>
+            </div>
+              <div class="form-box">
+                <form id="login" class="box" method="post" action="login1.html"></form>
+                  <h1>Login</h1>
+                      <input type="number" placeholder="&#xf2c1; Unique Id" name="sid" required>
+                      <input type="password" placeholder="&#xf30d; Password" name="spassword" required>
+                      <input type="submit" class="submit-btn" name="login" value="Login">
+                  <a class="btn" id="btn">New User? Create User Account</a>
+                  </form>
+                  <div class="modal" id="modal">
+                    <div class="modal-content">
+                        <span class="close">&times;</span>
+                        <h3>Register user as</h3>
+                        <button type="button" class="core" onclick="location.href='corereg.html'">TDC Honours Student</button>
+                        <button type="button" class="pass" onclick="location.href='passreg.html'">TDC Pass Student</button>
+                    </div>
+                  </div>
+              </div>  
+        </div>  
+    <script>
+        var modal = document.getElementById("modal");
+
+        var btn = document.getElementById("btn");
+
+        var span = document.getElementsByClassName("close")[0];
+
+        btn.onclick = function() {
+          modal.style.display = "block";
+        }
+        span.onclick = function() {
+          modal.style.display = "none";
+        }
+    </script>
+
+    </section>
+</body>
+ </html>

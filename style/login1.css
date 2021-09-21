@@ -1,37 +1,79 @@
-body{
+@import url('https://fonts.googleapis.com/ css?family=Poppons:200,300,400,500,600,700,800,900&display=swap');
+*
+{
     margin: 0;
     padding: 0;
-    font-family: sans-serif;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
     background-image: url("..oep/oep/background.jpg");
 }
+section
+{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+}
+section .imgBx
+{
+    position: relative;
+    width: 50%;
+    height: 100%;
+}
+section .imgBx img
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 90%;
+    height: 100%;
+    object-fit: contain;
+    display: flex;
+    box-shadow: 5px 0 10px 0
+    grey;
+    background-color: rgb(13, 178, 219);
+}
+section .imgBx1 img
+{
+    position: absolute;
+    top: 10;
+    left: 90%;
+    width: 115px;
+    height: 10%;
+    object-fit: contain;
+}
 .navbar{
-    overflow: hidden;
-    background-color: #08061683;
-    padding-top: -1%;
+    background-color: #ebb60a83;
+    padding-top: 10%;
+    padding-left: 0%;
+    padding-right: 0%;
+    width: 164%;
 }
 .navbar img{
-    float: left;
+    float: right;
     margin-left: 15px;
 }
 .navbar span{
-    color: white;
+    color: rgb(138, 69, 13);
     height: 90px; 
-    line-height: 10px; 
+    line-height: 40px; 
+    font-size: 40px;
+    font-family: 'Anton', sans-serif;
     white-space: nowrap;
-    padding-top: 10px;
+    padding-top: 0px;
 }
 .box{
-    width: 200px;
-    height: 400px;
+    width: 100px;
+    height: 50px;
     padding: 30px;
     position: absolute;
     top: 60%;
     left: 50%;
     transform: translate(-50%,-50%);
-    background: grey;
+    background: transparent;
 }
 .box h1{
-    color: black;
+    color: rgb(182, 31, 64);
     text-transform: uppercase;
     text-align: center;
 }
@@ -52,12 +94,12 @@ body{
 }
 .box input[type = 'text']:focus,.box input[type = 'number']:focus,.box input[type = 'password']:focus,.box input[type = 'email']:focus{
     width: 280px;
-    border-color: #2ecc71;
+    border-color: #da1973;
 }
 .submit-btn{
     padding: 14px 40px;
     display: block;
-    background: linear-gradient(to right,#ff105f,#ffad06);
+    background: linear-gradient(to right,#ff105f,#ff0606ce);
     border: 0;
     outline: none;
     border-radius: 30px;
@@ -65,7 +107,7 @@ body{
     margin: 20px auto;
 }
 .submit-btn:hover{
-    background: linear-gradient(to right,#00b712,#5aff15);
+    background: linear-gradient(to right,#007db7,#5aff15);
 }
 a{
     text-decoration: none;
@@ -131,4 +173,8 @@ button{
     border: white;
     color: white;
     background-color: deepskyblue;
+}
+h1
+{
+    padding-top: 30%;
 }
