@@ -1,14 +1,14 @@
 <?php
 session_start();
 
-    include("../dbconn.php");
+    include("../BackEnd/config.php");
     include("functions.php");
  
     $user_data = check_login($con);
 
     $query="select * from studentlogin where sid = '$user_data[sid]'";
     $data=mysqli_query($con,$query);
-    while($row = mysqli_fetch_array($data)){
+    while($row = mysqli_fetch_assoc($data)){
         $uid=$row['sid'];
         $name=$row['sname'];
         $roll=$row['sroll'];
@@ -18,7 +18,6 @@ session_start();
         $course=$row['scourse'];
         $sem=$row['ssem'];
         $core=$row['score'];
-        $pass1=$row['spass1'];
         $pass2=$row['spass2'];
         $pass3=$row['spass3'];
         $gec=$row['sgec'];
@@ -28,33 +27,113 @@ session_start();
     }
 ?>
 <!DOCTYPE html>
-<html>
-<head>
+<html lang="en">
+  <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-    <link rel="stylesheet" type="text/css" href="../style/profile.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>Profile</title>
-</head>
-<body>
-    <div class="main">
-        <div class="navbar">
-            <img src="../logo.png">&nbsp
-            <span> KARIMGANJ COLLEGE</span><br>&nbsp
-            <span class="logo">Online Examination Portal</span>
-            <div class="uname">
-                <span><?php echo $user_data['sname']; ?></span>
-            </div>
+    <!-- plugins:css -->
+    <link rel="stylesheet" href="assets/vendors/iconfonts/mdi/css/materialdesignicons.css">
+    <!-- endinject -->
+    <!-- vendor css for this page -->
+    <!-- End vendor css for this page -->
+    <!-- inject:css -->
+    <link rel="stylesheet" href="assets/css/shared/style.css">
+    <!-- endinject -->
+    <!-- Layout style -->
+    <link rel="stylesheet" href="assets/css/demo_1/style.css">
+    <!-- Layout style -->
+    <link rel="shortcut icon" href="asssets/images/favicon.ico" />
+    <!-- Favicon-->
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+  </head>
+  <style type="text/css">
+      .container{
+        position: relative;
+        display: flex;
+      }
+       .left{
+           position: relative;
+           display: flex;
+           flex-direction: column;
+           margin-right: 70px;
+       }
+       h1{
+           text-decoration: underline;
+       }
+       .right{
+           position: relative;
+           display: flex;
+           flex-direction: column;
+           align-items: center;
+           margin: 50px 50px;
+           padding: 50px 50px;
+       }
+  </style>
+
+<body class="header-fixed">
+    <!-- partial:partials/_header.html -->
+    <nav class="t-header">
+      <div class="t-header-brand-wrapper">
+        <img class="logo" src="logo.png" >
+      </div>
+         
+      </div>
+    </nav>
+    <!-- partial -->
+    <div class="page-body">
+      <!-- partial:partials/_sidebar.html -->
+      <div class="sidebar">
+        <div class="user-profile">
+          <div class="display-avatar animated-avatar">
+            <img class="profile-img img-lg rounded-circle" src="<?php echo $user_data['spic']; ?>" alt="profile image">
+          </div>
+          <div class="info-wrapper">
+            <p class="user-name"><?php echo $user_data['sname']; ?></p>
+            <h6 class="display-semester"><?php echo $user_data['ssem'];?> SEMESTER</h6>
+          </div>
         </div>
-         <div class="sidenav" id="sidenavpanel">
-            <a href="dashboard.php" id="dashboard">Dashboard</a>
-            <a href="exam.php" id="exam">Give Exam</a>
-            <a href="results.php" id="results">Results</a>
-            <a href="logout.php" id="logout">Logout</a>
-        </div>
+        <ul class="navigation-menu">
+          <li class="nav-category-divider">MAIN</li>
+          <li>
+            <a href="dashboard.php">
+              <span class="link-title">Dashboard</span>
+              <i class="mdi mdi-gauge link-icon"></i>
+            </a>
+          </li>
+          <li>
+            <a href="give_exam.php" aria-expanded="false">
+              <span class="link-title">Exams</span>
+              <i class="mdi mdi-flask link-icon"></i>
+            </a>
+          </li>
+          <li>
+            <a href="result.php" aria-expanded="false">
+              <span class="link-title">Results</span>
+              <i class="mdi mdi-bullseye link-icon"></i>
+            </a>
+          <li class="nav-category-divider">EDIT</li>
+          <li>
+            <a href="profile.php">
+              <span class="link-title">Profile</span>
+              <i class="mdi mdi-asterisk link-icon"></i>
+            </a>
+          </li>
+          <li>
+            <a href="slogout.php">
+              <span class="link-title">Sign Out   </span>
+              <i class="mdi mdi-asterisk link-icon"></i>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <!-- partial -->
+      <div class="page-content-wrapper">
         <div class="container">
         <div class="left">
-            <span><h1>PROFILE</h1></span>
-            <table>
+            <span><h1>PROFILE</h1></span><br><br>
+            <div class='table-responsive table-bordered table-striped'>
+                <table class='table'>
                 <tr>
                     <td><b>Unique Id</b></td>
                     <td><?php echo"$uid";?></td>
@@ -90,16 +169,8 @@ session_start();
                  <?php
                     if($core!=null){
                        echo "<tr>";
-                       echo "<td><b>Core/DSE/CORE1</b></td>";
+                       echo "<td><b>CORE/DSE/CORE1/DSC1/DSE1</b></td>";
                        echo "<td>$core</td>";
-                       echo "</tr>";
-                   }
-                 ?>
-                 <?php
-                    if($pass1!=null){
-                       echo "<tr>";
-                       echo "<td><b>DSC1/DSE1</b></td>";
-                       echo "<td>$pass1</td>";
                        echo "</tr>";
                    }
                  ?>
@@ -144,16 +215,44 @@ session_start();
                    }
                  ?>
                 </table>
-                <button onclick="window.location.href='details.php'" class="upd">Update Details</button>
-                <button onclick="window.location.href='uppass.php'" class="password">Update Password</button>
+            </div><br>
+                <button onclick="window.location.href='details.php'" class="btn btn-outline-dark btn-rounded">Update Details</button><br>
+                <button onclick="window.location.href='uppass.php'" class="btn btn-outline-warning btn-rounded">Update Password</button>
         </div>
         <div class="right">            
                   <?php 
                         echo "<img src='".$pic."' style='width:200px;height:200px;'>";
-                  ?>                
-                <button onclick="window.location.href='image.php'" class="pimage">Update Profile Picture</button>            
+                  ?><br>                
+                <button onclick="window.location.href='image.php'" class="btn btn-outline-success btn-rounded">Update Profile Picture</button>            
         </div>
     </div>
-   
-</body>
+        <!-- partial:partials/_footer.html -->
+        <footer class="footer">
+          <div class="row">
+            <div class="col-sm-6 text-center text-sm-right order-sm-1">
+              <ul class="text-gray">
+                <li><small><a href="#">Session: 2020-2021</a></small></li>
+                <li><small><a href="#">Group C Project</a></small></li>
+              </ul>
+            </div>
+            <div class="col-sm-6 text-center text-sm-left mt-3 mt-sm-0">
+              <small class="text-muted d-block">BCA 6th Semester</small>
+              <small class="text-gray mt-2">Handcrafted With <i class="mdi mdi-heart text-danger"></i></small>
+            </div>
+          </div>
+        </footer>
+        <!-- partial -->
+      </div>
+      <!-- page content ends -->
+    </div>
+    <!--page body ends -->
+    <!-- SCRIPT LOADING START FORM HERE /////////////-->
+    <!-- plugins:js -->
+    <script src="assets/vendors/js/core.js"></script>
+    <!-- endinject -->
+    <!-- build:js -->
+    <script src="assets/js/template.js"></script>
+    <script src="assets/js/dashboard.js"></script>
+    <!-- endbuild -->
+  </body>
 </html>

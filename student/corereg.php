@@ -1,7 +1,7 @@
 <?php
 session_start();
 
-   include("../dbconn.php");
+require_once "../BackEnd/config.php";
    include("functions.php");
 
    if($_SERVER['REQUEST_METHOD'] == "POST")
@@ -18,7 +18,7 @@ session_start();
       $aecc=$_POST['saecc'];
       $file=$_FILES['spic']['name'];
       $tempname=$_FILES['spic']['tmp_name'];
-      $folder="image/.$file";
+      $folder="picture/.$file";
       $pass=$_POST['spassword'];
 
       move_uploaded_file($tempname,$folder);
@@ -26,8 +26,10 @@ session_start();
       if(!empty($name) && !empty($roll) && !empty($mail) && !empty($pno) && !empty($stream) && !empty($sem) && !empty($core) && !empty($pass))
       {
 
-         $sid = random_num(6);
-         $course = "HONOURS";
+        //function to generate random unique id
+         $sid = mt_rand(1000,999999);
+         
+         $course = "Hons";
          $var = 0;
          $query="insert into studentlogin (sid,sname,sroll,semail,sphone,sstream,scourse,ssem,score,sgec,ssec,saecc,spic,spassword,status) values ('$sid','$name','$roll','$mail','$pno','$stream','$course','$sem','$core',if('$gec' = '', NULL, '$gec'),if('$sec' = '', NULL, '$sec'),if('$aecc' = '', NULL, '$aecc'),'$folder','$pass','$var')";
          mysqli_query($con,$query);

@@ -1,7 +1,7 @@
 <?php
 session_start();
 
-    include("../dbconn.php");
+require_once "../BackEnd/config.php";
     include("functions.php");
  
     $user_data = check_login($con);
@@ -11,7 +11,7 @@ session_start();
 <head>
 	<meta charset="utf-8">
 	<title>Update Password</title>
-	<link rel="stylesheet" type="text/css" href="../style/reg.css">
+	<link rel="stylesheet" type="text/css" href="style/reg.css">
 </head>
 <style>
 h1{

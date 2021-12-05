@@ -1,51 +1,94 @@
-<html>
-<head>
-<title>Login</title>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-<link rel="stylesheet" href="https://kit-pro.fontawesome.com/releases/v5.15.1/css/pro.min.css"/>
-<link rel="stylesheet" type="text/css" href="../style/login.css">
-</head>
-<body>
-      <div class="main">
-        <div class="navbar">
-          <img src="../logo.png">&nbsp
-          <span> KARIMGANJ COLLEGE</span><br>&nbsp
-          <span class="logo">Online Examination Portal</span>
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href=" style/fonts/icomoon/style.css">
+
+    <link rel="stylesheet" href="style/css/owl.carousel.min.css">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="style/css/bootstrap.min.css">
+    
+    <!-- Style -->
+    <link rel="stylesheet" href="style/css/style.css">
+
+    <title>Login</title>
+  </head>
+  <body>
+  
+
+  
+  <div class="content">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <img src="images/undraw_remotely_2j6y.svg" alt="Image" class="img-fluid">
         </div>
-          <div class="form-box">
-            <form id="login" class="box" method="post" action="login.php">
-              <h1>Login</h1>
-                  <input type="number" placeholder="&#xf2c1; Unique Id" name="sid" required>
-                  <input type="password" placeholder="&#xf30d; Password" name="spassword" required>
-                  <input type="submit" class="submit-btn" name="login" value="Login">
-              <a class="btn" id="btn">New User? Create User Account</a>
-              </form>
-              <div class="modal" id="modal">
-                <div class="modal-content">
-                    <span class="close">&times;</span>
-                    <h3>Register user as</h3>
-                    <button type="button" class="core" onclick="location.href='corereg.html'">TDC Honours Student</button>
-                    <button type="button" class="pass" onclick="location.href='passreg.html'">TDC Pass Student</button>
-                </div>
+        <div class="col-md-6 contents">
+          <div class="row justify-content-center">
+            <div class="col-md-8">
+              <div class="mb-4">
+              <h3>Log In</h3>
+              <p class="mb-4"></p>
+            </div>
+            <form action="login.php" method="post">
+              <div class="form-group first">                
+                <input type="text" class="form-control" id="username" placeholder="Unique ID" name="sid" required>
+
               </div>
+              <div class="form-group last mb-4">                
+                <input type="password" class="form-control" id="password" placeholder="Password" name="spassword" required>
+              </div>
+              <div class="d-flex mb-4 align-items-center">
+                <span class="ml-auto"><a href="#" class="forgot-pass">Forgot Password</a></span> 
+              </div>
+
+              <input type="submit" name="login" value="Log In" class="btn btn-block btn-primary">
+            </form><br>
+            <div class="signup-link">
+              <p>Don't have an account yet?</p>
+              <p class="text-primary" id="btn" data-toggle="modal" data-target="#modal">Sign Up</p>
+            </div>
+            <div class="modal" id="modal">
+              <div class="modal-dialog">
+              <div class="modal-content">
+                  <!-- Modal Header -->
+                  <div class="modal-header">
+                    <h4 class="modal-title">Register user as</h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                  </div>
+                  <!-- Modal body -->
+                  <div class="modal-body">
+                    <button type="button" class="btn btn-outline-success btn-rounded" onclick="location.href='corereg.html'">TDC Honours Student</button>
+                    <button type="button" class="btn btn-outline-success btn-rounded" onclick="location.href='corereg.html'">TDC Pass Student</button>
+                  </div>
+                  
+                  <!-- Modal footer -->
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-danger btn-rounded" data-dismiss="modal">Close</button>
+                  </div>
+              </div>
+            </div>
+                
+              </div>
+            </div>
           </div>
-     </div>
+          
+        </div>
+        
+      </div>
+    </div>
+  </div>
 
-    <script>
-        var modal = document.getElementById("modal");
-
-        var btn = document.getElementById("btn");
-
-        var span = document.getElementsByClassName("close")[0];
-
-        btn.onclick = function() {
-          modal.style.display = "block";
-        }
-        span.onclick = function() {
-          modal.style.display = "none";
-        }
-    </script>
-
-</body>
+  
+    <script src="style/js/jquery-3.3.1.min.js"></script>
+    <script src="style/js/popper.min.js"></script>
+    <script src="style/js/bootstrap.min.js"></script>
+    <script src="style/js/main.js"></script>
+    
+  </body>
 </html>

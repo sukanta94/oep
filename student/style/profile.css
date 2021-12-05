@@ -1,0 +1,97 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+.navbar{
+    overflow: hidden;
+    background-color: #333;
+}
+.navbar img{
+    float: left;
+    margin-left: 15px;
+}
+.navbar span{
+    color: white;
+    height: 90px; 
+    line-height: 10px; 
+    white-space: nowrap;
+    padding-top: 10px;
+}
+#sidenavpanel a{
+    position: absolute;
+    left: 100px;
+    padding: 15px;
+    width: 100px;
+    text-decoration: none;
+    font-size: 20px;
+    color: white;
+    border-radius: 0 5px 5px 0;
+}
+#sidenavpanel a{
+    left: 0;
+}
+#dashboard{
+    top: 90px;
+    background-color: #f0560a;
+}
+#exam{
+    top: 150px;
+    background-color: #04AA6D;
+}
+#results{
+    top: 210px;
+    background-color: #f44336;
+}
+#logout{
+    top: 270px;
+    background-color: #555;
+}
+.uname{
+    float: right;
+    padding-right: 20px;
+}
+.container{
+    position: relative;
+    margin-left:150px;
+    display: flex;
+}
+.left{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    margin-right: 70px;
+}
+h1{
+    text-decoration: underline;
+}
+td,th,tr{
+    padding:  10px;
+    border: 1px solid black;
+}  
+button{
+    text-decoration: none;
+    padding: 10px 20px;
+    margin-top: 10px;
+    border-radius: 20px;
+    border: none;
+    background: linear-gradient(to right,#ff105f,#ffad06);
+    color: white;
+}
+.upd:hover{
+    background: linear-gradient(to right,#00b712,#5aff15);
+}
+.password:hover{
+    background: linear-gradient(to right,#00b712,#5aff15);
+}
+.right{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 50px 50px;
+    padding: 50px 50px;
+}
+.pimage:hover{
+    background: linear-gradient(to right,#00b712,#5aff15);
+}

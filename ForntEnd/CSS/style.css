@@ -1,0 +1,70 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-color: beige;
+    font-family: sans-serif;
+}
+div{
+    width: 300px;
+    height: 700px;
+    padding: 30px;
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background: transparent;
+}
+div h1{
+    color: black;
+    text-transform: uppercase;
+    text-align: center;
+}
+div input[type = 'name'],
+div input[type = 'id'],
+div input[type = 'password'],
+div input[type = 'department'],
+div input[type = 'email'],
+div select{
+    border: 0;
+    background: none;
+    display: block;
+    margin: 10px auto;
+    border: 2px solid #3498db;
+    padding: 10px 10px;
+    width: 200px;
+    outline: none;
+    color: black;
+    border-radius: 5px;
+    transition: 0.15s;
+    cursor: pointer;
+    font-family: Roboto, 'Font Awesome\ 5 Pro', sans-serif;
+}
+div input[type = 'name']:focus,
+div input[type = 'id']:focus,
+div input[type = 'text']:focus,
+div input[type = 'number']:focus,
+div input[type = 'password']:focus,
+div input[type = 'email']:focus{
+    width: 280px;
+    border-color: #2ecc71;
+}
+button{
+    padding: 14px 40px;
+    display: block;
+    background: linear-gradient(to right,#ff105f,#ffad06);
+    border: 0;
+    outline: none;
+    border-radius: 30px;
+    text-align: center;
+    margin: 20px auto;
+}
+button:hover{
+    background: linear-gradient(to right,#00b712,#5aff15);
+}
+label{
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+    size: 10px;
+    color: cadetblue;
+    margin: auto;
+}

@@ -1,263 +1,315 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-<title>Register</title>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-<link rel="stylesheet" href="https://kit-pro.fontawesome.com/releases/v5.15.1/css/pro.min.css"/>
-<link rel="stylesheet" type="text/css" href="../style/reg.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Sign Up</title>
+
+    <!-- Font Icon -->
+    <link rel="stylesheet" href="style/fonts/material-icon/css/material-design-iconic-font.min.css">
+
+    <!-- Main css -->
+    <link rel="stylesheet" href="style/css/register.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 </head>
 <body>
-      <div class="main">
-        <div class="navbar">
-          <img src="../logo.png">&nbsp
-          <span> KARIMGANJ COLLEGE</span><br>&nbsp
-          <span class="logo">Online Examination Portal</span>
-        </div>
-          <div class="form-box">
-              <form id="register" class="box" method="post" action="corereg.php" enctype="multipart/form-data">
-                <h1>Register</h1>
-                  <input type="text" placeholder="&#xf507; Full Name" name="sname" required>
-                  <input type="number" placeholder="&#xf0e0; Class Roll no." name="srollno" required>
-                  <input type="email" placeholder="&#xf1fa; E-mail Id" name="semail" required>
-                  <input type="number" placeholder="&#xf879; Phone No." name="sphone" required>
-                  <select name="sstream" id="course" required>
-                      <option hidden disabled selected value>Select Stream</option>
-                      <option value="Science">Science</option>
-                      <option value="Commerce">Commerce</option>
-                      <option value="Arts">Arts</option>
-                  </select>
-                  <select name="ssem" id="semester" required>
-                      <option hidden disabled selected value>Select Semester</option>
-                      <option value="1st Semester">1st Semester</option>
-                      <option value="2nd Semester">2nd Semester</option>
-                      <option value="3rd Semester">3rd Semester</option>
-                      <option value="4th Semester">4th Semester</option>
-                      <option value="5th Semester">5th Semester</option>
-                      <option value="6th Semester">6th Semester</option>
-                  </select>
-                  <select name="score" id="core" required>
-                      <option hidden disabled selected value>Select CORE / DSE / CORE1</option>
-                      <option value="accnt">Accountancy</option>
-                      <option value="alteng">Alternative English</option>
-                      <option value="arab">Arabic</option>
-                      <option value="audcg">Auditing and Corporate Governance</option>
-                      <option value="bnkin">Banking and Insurance</option>
-                      <option value="bngc">Bengali</option>
-                      <option value="bng">Bengali Communication</option>
-                      <option value="bio">Biology</option>
-                      <option value="biotech">Biotechnology</option>
-                      <option value="bot">Botany</option>
-                      <option value="bcomm">Business Communication</option>
-                      <option value="blw">Business Law</option>
-                      <option value="bmt">Business Mathematics</option>
-                      <option value="bmst">Business Mathematics & Statistics</option>
-                      <option value="bom">Business Organisation & Management</option>
-                      <option value="brmp">Business Research Methods and Project Work</option>
-                      <option value="bst">Business Statistics</option>
-                      <option value="bsstud">Business Studies</option>
-                      <option value="btpm">Business Tax Procedures & Management</option>
-                      <option value="chem">Chemistry</option>
-                      <option value="cmstcomm">CMST</option>
-                      <option value="comlaw">Company Law</option>
-                      <option value="compa">Computer Application</option>
-                      <option value="cab">Computer Applications in Business</option>
-                      <option value="compsc">Computer Science</option>
-                      <option value="conac">Consumer Affairs & Customer Care</option>
-                      <option value="cacc">Corporate Accounting</option>
-                      <option value="claw">Corporate Laws</option>
-                      <option value="ctp">Corporate Tax Planning</option>
-                      <option value="costac">Cost Accounting</option>
-                      <option value="ecomm">E-Commerce</option>
-                      <option value="ecoenv">Ecology & Environmental Science</option>
-                      <option value="eco">Economics</option>
-                      <option value="engc">English</option>
-                      <option value="eng">English Communication</option>
-                      <option value="ent">Entrepreneurship</option>
-                      <option value="evs">Environmental Studies (EVS)</option>
-                      <option value="facc">Financial Accounting</option>
-                      <option value="fmis">Financial Markets, Institutions and Financial Serv</option>
-                      <option value="ffm">Fundamentals of Financial Management</option>
-                      <option value="foi">Fundamentals of Investment</option>
-                      <option value="geneng">General English</option>
-                      <option value="geo">Geology</option>
-                      <option value="hist">History</option>
-                      <option value="hrm">Human Resource Management</option>
-                      <option value="itlp">Income Tax Law & Practice</option>
-                      <option value="indeco">Indian Economy</option>
-                      <option value="itlaw">Indirect Tax Law</option>
-                      <option value="irll">Industrial Relations & Labour Laws</option>
-                      <option value="ibs">International Business</option>
-                      <option value="maeco">Macro Economics</option>
-                      <option value="maacc">Management Accounting</option>
-                      <option value="mpa">Management Practice & Application</option>
-                      <option value="math">Mathematics</option>
-                      <option value="meco">Micro Economics</option>
-                      <option value="mil">MIL</option>
-                      <option value="Omsp">Office Management and Secretarial Practice</option>
-                      <option value="psasale">Personal Selling & Salesmanship</option>
-                      <option value="phil">Philosophy</option>
-                      <option value="phy">Physics</option>
-                      <option value="polsc">Political Science</option>
-                      <option value="pom">Principles of Marketing</option>
-                      <option value="snsk">Sanskrit</option>
-                      <option value="stat">Statistics</option>
-                      <option value="zoo">Zoology</option>
-                  </select>
-                  <select name="sgec" id="gec">
-                      <option hidden disabled selected value>Select GE (not required for 3rd year)</option>
-                      <option value="accnt">Accountancy</option>
-                      <option value="alteng">Alternative English</option>
-                      <option value="arab">Arabic</option>
-                      <option value="audcg">Auditing and Corporate Governance</option>
-                      <option value="bnkin">Banking and Insurance</option>
-                      <option value="bngc">Bengali</option>
-                      <option value="bng">Bengali Communication</option>
-                      <option value="bio">Biology</option>
-                      <option value="biotech">Biotechnology</option>
-                      <option value="bot">Botany</option>
-                      <option value="botbio">Botany & Biotechnology</option>
-                      <option value="bcomm">Business Communication</option>
-                      <option value="blw">Business Law</option>
-                      <option value="bmt">Business Mathematics</option>
-                      <option value="bmst">Business Mathematics & Statistics</option>
-                      <option value="bom">Business Organisation & Management</option>
-                      <option value="brmp">Business Research Methods and Project Work</option>
-                      <option value="bst">Business Statistics</option>
-                      <option value="bsstud">Business Studies</option>
-                      <option value="btpm">Business Tax Procedures & Management</option>
-                      <option value="chem">Chemistry</option>
-                      <option value="cmstcomm">CMST</option>
-                      <option value="comlaw">Company Law</option>
-                      <option value="compa">Computer Application</option>
-                      <option value="cab">Computer Applications in Business</option>
-                      <option value="compsc">Computer Science</option>
-                      <option value="compsca">Computer Science & Application</option>
-                      <option value="conac">Consumer Affairs & Customer Care</option>
-                      <option value="cacc">Corporate Accounting</option>
-                      <option value="claw">Corporate Laws</option>
-                      <option value="ctp">Corporate Tax Planning</option>
-                      <option value="costac">Cost Accounting</option>
-                      <option value="ecomm">E-Commerce</option>
-                      <option value="ecoenv">Ecology & Environmental Science</option>
-                      <option value="eco">Economics</option>
-                      <option value="engc">English</option>
-                      <option value="eng">English Communication</option>
-                      <option value="ent">Entrepreneurship</option>
-                      <option value="evs">Environmental Studies (EVS)</option>
-                      <option value="facc">Financial Accounting</option>
-                      <option value="fmis">Financial Markets, Institutions and Financial Serv</option>
-                      <option value="ffm">Fundamentals of Financial Management</option>
-                      <option value="foi">Fundamentals of Investment</option>
-                      <option value="geneng">General English</option>
-                      <option value="geo">Geology</option>
-                      <option value="hist">History</option>
-                      <option value="hrm">Human Resource Management</option>
-                      <option value="itlp">Income Tax Law & Practice</option>
-                      <option value="indeco">Indian Economy</option>
-                      <option value="itlaw">Indirect Tax Law</option>
-                      <option value="irll">Industrial Relations & Labour Laws</option>
-                      <option value="ibs">International Business</option>
-                      <option value="maeco">Macro Economics</option>
-                      <option value="maacc">Management Accounting</option>
-                      <option value="mpa">Management Practice & Application</option>
-                      <option value="math">Mathematics</option>
-                      <option value="meco">Micro Economics</option>
-                      <option value="mil">MIL</option>
-                      <option value="Omsp">Office Management and Secretarial Practice</option>
-                      <option value="psasale">Personal Selling & Salesmanship</option>
-                      <option value="phil">Philosophy</option>
-                      <option value="phy">Physics</option>
-                      <option value="polsc">Political Science</option>
-                      <option value="pom">Principles of Marketing</option>
-                      <option value="snsk">Sanskrit</option>
-                      <option value="stat">Statistics</option>
-                      <option value="zoo">Zoology</option>
-                  </select>
-                  <select name="ssec" id="sec">
-                      <option hidden disabled selected value>Select SEC (not required for 1st and 3rd year)</option>
-                      <option value="accnt">Accountancy</option>
-                      <option value="alteng">Alternative English</option>
-                      <option value="arab">Arabic</option>
-                      <option value="audcg">Auditing and Corporate Governance</option>
-                      <option value="bnkin">Banking and Insurance</option>
-                      <option value="bngc">Bengali</option>
-                      <option value="bng">Bengali Communication</option>
-                      <option value="bio">Biology</option>
-                      <option value="biotech">Biotechnology</option>
-                      <option value="bot">Botany</option>
-                      <option value="botbio">Botany & Biotechnology</option>
-                      <option value="bcomm">Business Communication</option>
-                      <option value="blw">Business Law</option>
-                      <option value="bmt">Business Mathematics</option>
-                      <option value="bmst">Business Mathematics & Statistics</option>
-                      <option value="bom">Business Organisation & Management</option>
-                      <option value="brmp">Business Research Methods and Project Work</option>
-                      <option value="bst">Business Statistics</option>
-                      <option value="bsstud">Business Studies</option>
-                      <option value="btpm">Business Tax Procedures & Management</option>
-                      <option value="chem">Chemistry</option>
-                      <option value="cmstcomm">CMST</option>
-                      <option value="comlaw">Company Law</option>
-                      <option value="compa">Computer Application</option>
-                      <option value="cab">Computer Applications in Business</option>
-                      <option value="compsc">Computer Science</option>
-                      <option value="compsca">Computer Science & Application</option>
-                      <option value="conac">Consumer Affairs & Customer Care</option>
-                      <option value="cacc">Corporate Accounting</option>
-                      <option value="claw">Corporate Laws</option>
-                      <option value="ctp">Corporate Tax Planning</option>
-                      <option value="costac">Cost Accounting</option>
-                      <option value="ecomm">E-Commerce</option>
-                      <option value="ecoenv">Ecology & Environmental Science</option>
-                      <option value="eco">Economics</option>
-                      <option value="engc">English</option>
-                      <option value="eng">English Communication</option>
-                      <option value="ent">Entrepreneurship</option>
-                      <option value="evs">Environmental Studies (EVS)</option>
-                      <option value="facc">Financial Accounting</option>
-                      <option value="fmis">Financial Markets, Institutions and Financial Serv</option>
-                      <option value="ffm">Fundamentals of Financial Management</option>
-                      <option value="foi">Fundamentals of Investment</option>
-                      <option value="geneng">General English</option>
-                      <option value="geo">Geology</option>
-                      <option value="hist">History</option>
-                      <option value="hrm">Human Resource Management</option>
-                      <option value="itlp">Income Tax Law & Practice</option>
-                      <option value="indeco">Indian Economy</option>
-                      <option value="itlaw">Indirect Tax Law</option>
-                      <option value="irll">Industrial Relations & Labour Laws</option>
-                      <option value="ibs">International Business</option>
-                      <option value="maeco">Macro Economics</option>
-                      <option value="maacc">Management Accounting</option>
-                      <option value="mpa">Management Practice & Application</option>
-                      <option value="math">Mathematics</option>
-                      <option value="meco">Micro Economics</option>
-                      <option value="mil">MIL</option>
-                      <option value="Omsp">Office Management and Secretarial Practice</option>
-                      <option value="psasale">Personal Selling & Salesmanship</option>
-                      <option value="phil">Philosophy</option>
-                      <option value="phy">Physics</option>
-                      <option value="polsc">Political Science</option>
-                      <option value="pom">Principles of Marketing</option>
-                      <option value="snsk">Sanskrit</option>
-                      <option value="stat">Statistics</option>
-                      <option value="zoo">Zoology</option>
-                  </select>
-                  <select name="saecc" id="aecc">
-                      <option hidden disabled selected value>Select AECC (not required for 2nd and 3rd year)</option>
-                      <option value="bng">Bengali Communication</option>
-                      <option value="bcomm">Business Communication</option>
-                      <option value="eng">English Communication</option>
-                      <option value="evs">Environmental Studies (EVS)</option>
-                  </select>
-                  <input type="file" name="spic" required>
-                  <input type="password" placeholder="&#xf30d; Password" name="spassword" required>
-                  <input type="submit" class="submit-btn" name="register" value="Register">
-              <a href="login.html">Already have an Account? Login</a>
-              </form>
-              
-          </div>
-     </div>
 
+    <div class="main">
+
+        <!-- Sign up form -->
+        <section class="signup">
+            <div class="container">
+                <div class="signup-content">
+                    <div class="signup-form">
+                        <h2 class="form-title">Sign up</h2>
+                        <form method="POST" class="register-form" id="register-form" action="corereg.php" enctype="multipart/form-data">
+                            <div class="form-group">
+                                <label for="name"><i class="zmdi zmdi-account material-icons-name"></i></label>
+                                <input type="text" name="sname" id="name" placeholder="Your Name" required/>
+                            </div>
+                            <div class="form-group">
+                                <label for="rollno"><i class="zmdi zmdi-email"></i></label>
+                                <input type="number" name="srollno" id="rollno" placeholder="Class Roll no." required/>
+                            </div>
+                            <div class="form-group">
+                                <label for="email"><i class="zmdi zmdi-email"></i></label>
+                                <input type="email" name="semail" id="email" placeholder="Your Email" required/>
+                            </div>
+                            <div class="form-group">
+                                <label for="phone"><i class="zmdi zmdi-phone-in-talk"></i></label>
+                                <input type="number" name="sphone" id="phone" placeholder="Your Phone No." required/>
+                            </div>                            
+                            <div class="form-group">
+                                <select class="custom-select" name="sstream" required>
+                                  <option hidden disabled selected value>Select Stream</option>
+                                  <option value="Science">Science</option>
+                                  <option value="Commerce">Commerce</option>
+                                  <option value="Arts">Arts</option>
+                                </select>
+                              </div>
+                              <div class="form-group">
+                                <select class="custom-select" name="ssem" required>
+                                    <option hidden disabled selected value>Select Semester</option>
+                                    <option value="1st">1st Semester</option>
+                                    <option value="2nd">2nd Semester</option>
+                                    <option value="3rd">3rd Semester</option>
+                                    <option value="4th">4th Semester</option>
+                                    <option value="5th">5th Semester</option>
+                                    <option value="6th">6th Semester</option>
+                                </select>
+                              </div>
+                              <div class="form-group">
+                                <select class="custom-select" name="score" required>
+                                    <option hidden disabled selected value>Select CORE / DSE / CORE1</option>
+                                    <option value="accnt">Accountancy</option>
+                                    <option value="alteng">Alternative English</option>
+                                    <option value="arab">Arabic</option>
+                                    <option value="audcg">Auditing and Corporate Governance</option>
+                                    <option value="bnkin">Banking and Insurance</option>
+                                    <option value="bngc">Bengali</option>
+                                    <option value="bng">Bengali Communication</option>
+                                    <option value="bio">Biology</option>
+                                    <option value="biotech">Biotechnology</option>
+                                    <option value="bot">Botany</option>
+                                    <option value="bcomm">Business Communication</option>
+                                    <option value="blw">Business Law</option>
+                                    <option value="bmt">Business Mathematics</option>
+                                    <option value="bmst">Business Mathematics & Statistics</option>
+                                    <option value="bom">Business Organisation & Management</option>
+                                    <option value="brmp">Business Research Methods and Project Work</option>
+                                    <option value="bst">Business Statistics</option>
+                                    <option value="bsstud">Business Studies</option>
+                                    <option value="btpm">Business Tax Procedures & Management</option>
+                                    <option value="chem">Chemistry</option>
+                                    <option value="cmstcomm">CMST</option>
+                                    <option value="comlaw">Company Law</option>
+                                    <option value="compa">Computer Application</option>
+                                    <option value="cab">Computer Applications in Business</option>
+                                    <option value="compsc">Computer Science</option>
+                                    <option value="conac">Consumer Affairs & Customer Care</option>
+                                    <option value="cacc">Corporate Accounting</option>
+                                    <option value="claw">Corporate Laws</option>
+                                    <option value="ctp">Corporate Tax Planning</option>
+                                    <option value="costac">Cost Accounting</option>
+                                    <option value="ecomm">E-Commerce</option>
+                                    <option value="ecoenv">Ecology & Environmental Science</option>
+                                    <option value="eco">Economics</option>
+                                    <option value="engc">English</option>
+                                    <option value="eng">English Communication</option>
+                                    <option value="ent">Entrepreneurship</option>
+                                    <option value="evs">Environmental Studies (EVS)</option>
+                                    <option value="facc">Financial Accounting</option>
+                                    <option value="fmis">Financial Markets, Institutions and Financial Serv</option>
+                                    <option value="ffm">Fundamentals of Financial Management</option>
+                                    <option value="foi">Fundamentals of Investment</option>
+                                    <option value="geneng">General English</option>
+                                    <option value="geo">Geology</option>
+                                    <option value="hist">History</option>
+                                    <option value="hrm">Human Resource Management</option>
+                                    <option value="itlp">Income Tax Law & Practice</option>
+                                    <option value="indeco">Indian Economy</option>
+                                    <option value="itlaw">Indirect Tax Law</option>
+                                    <option value="irll">Industrial Relations & Labour Laws</option>
+                                    <option value="ibs">International Business</option>
+                                    <option value="maeco">Macro Economics</option>
+                                    <option value="maacc">Management Accounting</option>
+                                    <option value="mpa">Management Practice & Application</option>
+                                    <option value="math">Mathematics</option>
+                                    <option value="meco">Micro Economics</option>
+                                    <option value="mil">MIL</option>
+                                    <option value="Omsp">Office Management and Secretarial Practice</option>
+                                    <option value="psasale">Personal Selling & Salesmanship</option>
+                                    <option value="phil">Philosophy</option>
+                                    <option value="phy">Physics</option>
+                                    <option value="polsc">Political Science</option>
+                                    <option value="pom">Principles of Marketing</option>
+                                    <option value="snsk">Sanskrit</option>
+                                    <option value="stat">Statistics</option>
+                                    <option value="zoo">Zoology</option>
+                                </select>
+                              </div>
+                              <div class="form-group">
+                                <select class="custom-select" name="sgec">
+                                    <option hidden disabled selected value>Select GE (not required for 3rd year)</option>
+                                    <option value="accnt">Accountancy</option>
+                                    <option value="alteng">Alternative English</option>
+                                    <option value="arab">Arabic</option>
+                                    <option value="audcg">Auditing and Corporate Governance</option>
+                                    <option value="bnkin">Banking and Insurance</option>
+                                    <option value="bngc">Bengali</option>
+                                    <option value="bng">Bengali Communication</option>
+                                    <option value="bio">Biology</option>
+                                    <option value="biotech">Biotechnology</option>
+                                    <option value="bot">Botany</option>
+                                    <option value="botbio">Botany & Biotechnology</option>
+                                    <option value="bcomm">Business Communication</option>
+                                    <option value="blw">Business Law</option>
+                                    <option value="bmt">Business Mathematics</option>
+                                    <option value="bmst">Business Mathematics & Statistics</option>
+                                    <option value="bom">Business Organisation & Management</option>
+                                    <option value="brmp">Business Research Methods and Project Work</option>
+                                    <option value="bst">Business Statistics</option>
+                                    <option value="bsstud">Business Studies</option>
+                                    <option value="btpm">Business Tax Procedures & Management</option>
+                                    <option value="chem">Chemistry</option>
+                                    <option value="cmstcomm">CMST</option>
+                                    <option value="comlaw">Company Law</option>
+                                    <option value="compa">Computer Application</option>
+                                    <option value="cab">Computer Applications in Business</option>
+                                    <option value="compsc">Computer Science</option>
+                                    <option value="compsca">Computer Science & Application</option>
+                                    <option value="conac">Consumer Affairs & Customer Care</option>
+                                    <option value="cacc">Corporate Accounting</option>
+                                    <option value="claw">Corporate Laws</option>
+                                    <option value="ctp">Corporate Tax Planning</option>
+                                    <option value="costac">Cost Accounting</option>
+                                    <option value="ecomm">E-Commerce</option>
+                                    <option value="ecoenv">Ecology & Environmental Science</option>
+                                    <option value="eco">Economics</option>
+                                    <option value="engc">English</option>
+                                    <option value="eng">English Communication</option>
+                                    <option value="ent">Entrepreneurship</option>
+                                    <option value="evs">Environmental Studies (EVS)</option>
+                                    <option value="facc">Financial Accounting</option>
+                                    <option value="fmis">Financial Markets, Institutions and Financial Serv</option>
+                                    <option value="ffm">Fundamentals of Financial Management</option>
+                                    <option value="foi">Fundamentals of Investment</option>
+                                    <option value="geneng">General English</option>
+                                    <option value="geo">Geology</option>
+                                    <option value="hist">History</option>
+                                    <option value="hrm">Human Resource Management</option>
+                                    <option value="itlp">Income Tax Law & Practice</option>
+                                    <option value="indeco">Indian Economy</option>
+                                    <option value="itlaw">Indirect Tax Law</option>
+                                    <option value="irll">Industrial Relations & Labour Laws</option>
+                                    <option value="ibs">International Business</option>
+                                    <option value="maeco">Macro Economics</option>
+                                    <option value="maacc">Management Accounting</option>
+                                    <option value="mpa">Management Practice & Application</option>
+                                    <option value="math">Mathematics</option>
+                                    <option value="meco">Micro Economics</option>
+                                    <option value="mil">MIL</option>
+                                    <option value="Omsp">Office Management and Secretarial Practice</option>
+                                    <option value="psasale">Personal Selling & Salesmanship</option>
+                                    <option value="phil">Philosophy</option>
+                                    <option value="phy">Physics</option>
+                                    <option value="polsc">Political Science</option>
+                                    <option value="pom">Principles of Marketing</option>
+                                    <option value="snsk">Sanskrit</option>
+                                    <option value="stat">Statistics</option>
+                                    <option value="zoo">Zoology</option>
+                                </select>
+                              </div>
+                              <div class="form-group">
+                                <select class="custom-select" name="ssec">
+                                    <option hidden disabled selected value>Select SEC (not required for 1st and 3rd year)</option>
+                                    <option value="accnt">Accountancy</option>
+                                    <option value="alteng">Alternative English</option>
+                                    <option value="arab">Arabic</option>
+                                    <option value="audcg">Auditing and Corporate Governance</option>
+                                    <option value="bnkin">Banking and Insurance</option>
+                                    <option value="bngc">Bengali</option>
+                                    <option value="bng">Bengali Communication</option>
+                                    <option value="bio">Biology</option>
+                                    <option value="biotech">Biotechnology</option>
+                                    <option value="bot">Botany</option>
+                                    <option value="botbio">Botany & Biotechnology</option>
+                                    <option value="bcomm">Business Communication</option>
+                                    <option value="blw">Business Law</option>
+                                    <option value="bmt">Business Mathematics</option>
+                                    <option value="bmst">Business Mathematics & Statistics</option>
+                                    <option value="bom">Business Organisation & Management</option>
+                                    <option value="brmp">Business Research Methods and Project Work</option>
+                                    <option value="bst">Business Statistics</option>
+                                    <option value="bsstud">Business Studies</option>
+                                    <option value="btpm">Business Tax Procedures & Management</option>
+                                    <option value="chem">Chemistry</option>
+                                    <option value="cmstcomm">CMST</option>
+                                    <option value="comlaw">Company Law</option>
+                                    <option value="compa">Computer Application</option>
+                                    <option value="cab">Computer Applications in Business</option>
+                                    <option value="compsc">Computer Science</option>
+                                    <option value="compsca">Computer Science & Application</option>
+                                    <option value="conac">Consumer Affairs & Customer Care</option>
+                                    <option value="cacc">Corporate Accounting</option>
+                                    <option value="claw">Corporate Laws</option>
+                                    <option value="ctp">Corporate Tax Planning</option>
+                                    <option value="costac">Cost Accounting</option>
+                                    <option value="ecomm">E-Commerce</option>
+                                    <option value="ecoenv">Ecology & Environmental Science</option>
+                                    <option value="eco">Economics</option>
+                                    <option value="engc">English</option>
+                                    <option value="eng">English Communication</option>
+                                    <option value="ent">Entrepreneurship</option>
+                                    <option value="evs">Environmental Studies (EVS)</option>
+                                    <option value="facc">Financial Accounting</option>
+                                    <option value="fmis">Financial Markets, Institutions and Financial Serv</option>
+                                    <option value="ffm">Fundamentals of Financial Management</option>
+                                    <option value="foi">Fundamentals of Investment</option>
+                                    <option value="geneng">General English</option>
+                                    <option value="geo">Geology</option>
+                                    <option value="hist">History</option>
+                                    <option value="hrm">Human Resource Management</option>
+                                    <option value="itlp">Income Tax Law & Practice</option>
+                                    <option value="indeco">Indian Economy</option>
+                                    <option value="itlaw">Indirect Tax Law</option>
+                                    <option value="irll">Industrial Relations & Labour Laws</option>
+                                    <option value="ibs">International Business</option>
+                                    <option value="maeco">Macro Economics</option>
+                                    <option value="maacc">Management Accounting</option>
+                                    <option value="mpa">Management Practice & Application</option>
+                                    <option value="math">Mathematics</option>
+                                    <option value="meco">Micro Economics</option>
+                                    <option value="mil">MIL</option>
+                                    <option value="Omsp">Office Management and Secretarial Practice</option>
+                                    <option value="psasale">Personal Selling & Salesmanship</option>
+                                    <option value="phil">Philosophy</option>
+                                    <option value="phy">Physics</option>
+                                    <option value="polsc">Political Science</option>
+                                    <option value="pom">Principles of Marketing</option>
+                                    <option value="snsk">Sanskrit</option>
+                                    <option value="stat">Statistics</option>
+                                    <option value="zoo">Zoology</option>
+                                </select>
+                              </div>
+                              <div class="form-group">
+                                <select class="custom-select" name="saecc">
+                                    <option hidden disabled selected value>Select AECC (not required for 2nd and 3rd year)</option>
+                                    <option value="bng">Bengali Communication</option>
+                                    <option value="bcomm">Business Communication</option>
+                                    <option value="eng">English Communication</option>
+                                    <option value="evs">Environmental Studies (EVS)</option>
+                                </select>
+                              </div><br>
+                              <div class="custom-file">
+                                <input type="file" class="custom-file-input" id="customFile" name="spic">
+                                <label class="custom-file-label" for="customFile">Choose image</label>
+                              </div>
+                            <div class="form-group">
+                                <label for="pass"><i class="zmdi zmdi-lock"></i></label>
+                                <input type="password" name="spassword" id="pass" placeholder="Password" required/>
+                            </div>
+                            <div class="form-group form-button">
+                                <input type="submit" name="register" id="signup" class="form-submit" value="Register"/>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="signup-image">
+                        <figure><img src="images/signup-image.jpg" alt="sing up image"></figure>
+                        <a href="login.html" class="signup-image-link text-primary"><i class="zmdi zmdi-account-box"></i> Already a member</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+    <!-- JS -->
+    <script src="style/vendor/jquery/jquery.min.js"></script>
+    <script src="style/js/register.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 </body>
 </html>

@@ -1,0 +1,27 @@
+:root{
+    padding: 0;
+    box-sizing: border-box;
+   
+}
+div{
+   
+    display: flex;
+    height: 1000px; 
+    width:500px;
+    justify-content: center;
+    padding: 10px;
+    margin: auto;
+}
+form{
+    display: flex;
+    background-color: aquamarine;
+    height: 1000px;
+    width: 500px;
+    padding: 5px;
+    align-content: center;
+    justify-content: center;
+    flex-direction: column;
+}
+form>input,label{
+    padding: 8px;
+}

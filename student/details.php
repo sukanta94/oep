@@ -1,7 +1,7 @@
 <?php
 session_start();
 
-    include("../dbconn.php");
+require_once "../BackEnd/config.php";
     include("functions.php");
  
     $user_data = check_login($con);    
@@ -12,7 +12,7 @@ session_start();
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <link rel="stylesheet" href="https://kit-pro.fontawesome.com/releases/v5.15.1/css/pro.min.css"/>
-    <link rel="stylesheet" type="text/css" href="../style/reg.css">
+    <link rel="stylesheet" type="text/css" href="style/reg.css">
     <title>Update Details</title>
 </head>
 <style>
@@ -27,7 +27,7 @@ h1{
         $query="select * from studentlogin where course = '$user_data[scourse]'";
         $data=mysqli_query($con,$query);
 
-          if($user_data['scourse']=='HONOURS'){
+          if($user_data['scourse']=='Hons'){
             echo '<form method="post" class="box">
                     <input type="text" placeholder="&#xf507; Full Name" name="sname" value="'.$user_data['sname'].'">
                     <input type="number" placeholder="&#xf0e0; Class Roll no." name="srollno" value="'.$user_data['sroll'].'">
@@ -35,12 +35,12 @@ h1{
                     <input type="number" placeholder="&#xf879; Phone No." name="sphone" value="'.$user_data['sphone'].'">
                     <select name="ssem" id="semester">
                       <option hidden disabled selected value>Select Semester</option>
-                      <option value="1st Semester">1st Semester</option>
-                      <option value="2nd Semester">2nd Semester</option>
-                      <option value="3rd Semester">3rd Semester</option>
-                      <option value="4th Semester">4th Semester</option>
-                      <option value="5th Semester">5th Semester</option>
-                      <option value="6th Semester">6th Semester</option>
+                      <option value="1st">1st Semester</option>
+                      <option value="2nd">2nd Semester</option>
+                      <option value="3rd">3rd Semester</option>
+                      <option value="4th">4th Semester</option>
+                      <option value="5th">5th Semester</option>
+                      <option value="6th">6th Semester</option>
                    </select>
                    <select name="score" id="core">
                       <option hidden disabled selected value>Select CORE / DSE / CORE1</option>
@@ -289,14 +289,14 @@ h1{
                     <input type="number" placeholder="&#xf879; Phone No." name="sphone" value="'.$user_data['sphone'].'">
                     <select name="ssem" id="semester">
                       <option hidden disabled selected value>Select Semester</option>
-                      <option value="1st Semester">1st Semester</option>
-                      <option value="2nd Semester">2nd Semester</option>
-                      <option value="3rd Semester">3rd Semester</option>
-                      <option value="4th Semester">4th Semester</option>
-                      <option value="5th Semester">5th Semester</option>
-                      <option value="6th Semester">6th Semester</option>
+                      <option value="1st">1st Semester</option>
+                      <option value="2nd">2nd Semester</option>
+                      <option value="3rd">3rd Semester</option>
+                      <option value="4th">4th Semester</option>
+                      <option value="5th">5th Semester</option>
+                      <option value="6th">6th Semester</option>
                    </select>
-                   <select name="spass1" id="pass1">
+                   <select name="score" id="pass1">
                       <option hidden disabled selected value>Select DSC1/DSE1</option>
                       <option value="accnt">Accountancy</option>
                       <option value="alteng">Alternative English</option>
@@ -592,13 +592,13 @@ h1{
                      $e=$_POST['semail'];
                      $p=$_POST['sphone'];
                      $s=$_POST['ssem'];
-                     $p1=$_POST['spass1'];
+                     $p1=$_POST['score'];
                      $p2=$_POST['spass2'];
                      $p3=$_POST['spass3'];                     
                      $se=$_POST['ssec'];
                      $a=$_POST['saecc'];
 
-                     $query="update studentlogin set sname='$n',sroll='$r',semail='$e',sphone='$p',ssem='$s',spass1='$p1',spass2='$p2',spass3='$p3',ssec='$se',saecc='$a' where sid='$user_data[sid]'";
+                     $query="update studentlogin set sname='$n',sroll='$r',semail='$e',sphone='$p',ssem='$s',score='$p1',spass2='$p2',spass3='$p3',ssec='$se',saecc='$a' where sid='$user_data[sid]'";
                      $data=mysqli_query($con,$query);
                      if($data){
                           echo "<script>alert('Profile picture updated successfully');window.location.href='profile.php';</script>";

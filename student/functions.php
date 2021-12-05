@@ -6,7 +6,8 @@ function check_login($con)
 	if(isset($_SESSION['sid']))
 	{
 		$id = $_SESSION['sid'];
-		$query = "select * from studentlogin where sid = '$id' limit 1";
+
+		$query = "select * from studentlogin where sid = '$id'";
 
 		$result = mysqli_query($con,$query);
 		if($result && mysqli_num_rows($result) > 0)
@@ -15,9 +16,9 @@ function check_login($con)
 			return $user_data;
 		}
 	}
-
+	
 	//redirect to login
-	header("Location: userlogin.php");
+	header("Location: login.html");
 	die;
 }
 
